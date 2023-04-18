@@ -13,5 +13,14 @@ export class LoginComponent {
     } else {
       alert('user dont want to open this link in new page');
     }
-  } 
+  }
+  
+  confirmToOpenCurrentPageInNewTab(){
+    const openCurrentPageInNewTab:any = confirm("Do you want open this page in new tab");
+    if(openCurrentPageInNewTab){
+      window.open("_blank");
+    } else {
+      alert("user dont want to open this page in new page");
+    }
+  }
 }
