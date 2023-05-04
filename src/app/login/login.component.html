@@ -1,9 +1,17 @@
 <div>
     <label for="uname"><b>Username</b></label>
     <input style="margin-left: 5px;" type="text" placeholder="Enter Username" name="uname" required>
-
     <label style="margin-left: 20px;" for="psw"><b>Password</b></label>
     <input style="margin-left: 5px;" type="password" placeholder="Enter Password" name="psw" required>
-
     <button style="margin-left: 10px;" type="submit" (click) = "confirmToOpenInNewTab()">Login</button>
+    <button style="margin-left: 10px; color:white; background-color: green;" 
+            type="Duplicate" (click) = "confirmToOpenCurrentPageInNewTab()">Duplicate</button>
+</div>
+<div><br>
+    <button (click) = "add()">Add</button>
+    <button style="margin-left: 20px;" (click) = "remove()">Remove</button>
+</div>
+<div>
+    <li style = "text-align: center; font-size: 50px; list-style: none;" 
+    *ngFor = "let x of addOrRemoveList; let i = index" [ngClass] = "{'bgColor': i%2 != 0 }">{{x}}</li>
 </div>
